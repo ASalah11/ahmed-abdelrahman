@@ -1,1 +1,39 @@
-
+/* Custom styles */
+.gradient-bg {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0ea5e9 100%);
+}
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 1.25rem; /* Adjust based on your icon size/padding */
+    top: 2.5rem; /* Align with the bottom of the circle icon */
+    height: calc(100% - 2.5rem);
+    width: 2px;
+    background-color: #e5e7eb;
+}
+.publication-card:hover .publication-title {
+    color: #3b82f6;
+}
+.nav-link {
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3b82f6;
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.active-nav::after {
+    width: 100%;
+}
